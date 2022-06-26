@@ -3,18 +3,17 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import javax.print.DocFlavor;
-
-public class GooglePage {
+public class FirefoxPage {
     WebDriver driver;
-    String url = "http://www.google.com";
+    String url = "http://www.duckduckgo.com";
     By searchbox = By.name("q");
-    public GooglePage(WebDriver d){
+
+    public FirefoxPage(WebDriver d){
         driver = d;
-        System.out.println("I am inside testSteps");
+        System.out.println("I am in Firefox Page");
 
     }
-    public void GoogleSearchTest(){
+    public void duck_duck_search_test(){
         geturl(url);
         String searchterm = "Eurorack";
         SendText(searchbox, searchterm);
@@ -24,7 +23,6 @@ public class GooglePage {
         String expectedresult = "Eurorack - Wikipedia";
         assert (searchresult1.getText().equals(expectedresult));
     }
-    //To DO: Create new class for these generic methods
     public void SendText(By by, String texttosend){
         driver.findElement(by).sendKeys(texttosend);
 
@@ -38,4 +36,3 @@ public class GooglePage {
 
     }
 }
-
