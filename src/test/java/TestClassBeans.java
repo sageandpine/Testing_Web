@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 public class TestClassBeans {
 
     WebDriver driver;
-    String url = "http://www.google.com";
+   // String url = "http://www.google.com";
 
     @BeforeTest
     void setup() {
@@ -31,11 +31,11 @@ public class TestClassBeans {
 
     }
 
-
     @Test
     void testSteps(){
         GooglePage gp = new GooglePage(driver);
         gp.GoogleSearchTest();
+
        // FirefoxPage fp = new FirefoxPage(driver);
       //  fp.duck_duck_search_test();
 
